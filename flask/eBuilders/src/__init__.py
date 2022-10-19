@@ -41,7 +41,7 @@ def create_app(test_config=None):
 
     with app.app_context():
         db.init_app(app)
-        db.create_all()
+        # db.create_all()
         migrate = Migrate(app, db)
         insert_dummy_data(db)
 
